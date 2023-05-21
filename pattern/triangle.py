@@ -11,6 +11,5 @@ def printTriangle(n):
 if __name__ == '__main__':
     printTriangle(3)
     printTriangle(4)
-
     printTriangle(5)
     printTriangle(6)
