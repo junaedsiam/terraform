@@ -8,6 +8,10 @@ def find_gcd_brute_force(num1, num2):
 
 
 # This is the euclidean approarch to find GCD.
+# Here is the equation -> GCD(a,b) = GCD (a - b, b) , where a > b
+# So we can rewrite the equation GCD(a,b) = GCD(a, a % b). Because
+# subtracting b from a will ultimately result in a % b after some number of iterations
+# So doing the a % b, we are avoiding those iteration
 # Time complexity: O(log(min(num1,num2))) # Space complexity: O(1)
 
 def find_gcd(num1, num2):

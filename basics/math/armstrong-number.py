@@ -10,10 +10,10 @@ def armstrong_number(n):
     while curr:
         curr //= 10
         count += 1
-    # Then take each digit and powered it by the digit count and sum it up
     curr = n
     res = 0
 
+    # Then take each digit powered by digit count, sum it up, and return
     while curr:
         rem = curr % 10
         res += rem ** count
