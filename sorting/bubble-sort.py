@@ -5,6 +5,9 @@ The algorithm compares adjacent elements and swaps them if they are out of order
 
 """
 
+# Time complexity: O(N ^ 2)
+# Space complexity: O(1)
+
 
 def bubble_sort(nums):
     n = len(nums)

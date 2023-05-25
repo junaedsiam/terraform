@@ -2,6 +2,9 @@
 The name "Insertion Sort" reflects the primary operation of inserting elements into their proper positions. Each element is "inserted" into the sorted portion, which increases in size until the entire list is sorted. This incremental insertion of elements gives rise to the name "Insertion Sort."
 """
 
+# Time complexity: O(N ^ 2)
+# Space complexity: O(1)
+
 
 def insertion_sort(nums):
     n = len(nums)

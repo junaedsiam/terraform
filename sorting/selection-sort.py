@@ -4,6 +4,9 @@ In Selection Sort, the algorithm repeatedly scans the list to find the smallest 
 The name "Selection Sort" reflects the emphasis on selecting elements during the sorting process. Unlike Bubble Sort, which involves adjacent element comparisons, Selection Sort focuses on selecting the smallest or largest element and moving it to its correct place, similar to a process of selection.
 """
 
+# Time complexity: O(N ^ 2)
+# Space complexity: O(1)
+
 
 def selection_sort(nums):
     n = len(nums)

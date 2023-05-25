@@ -1,4 +1,4 @@
-def solve(*args):
+def solve(args):
     pass
 
 
