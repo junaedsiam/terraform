@@ -1,4 +1,4 @@
-# TERRAFORM
+# Terraform
 
 Embark now, fellow seeker, and let your spirit soar on the wings of intuition and resilience. Within the boundless horizons of Terraform, we shall awaken the dormant sorcerer within you, empowering you to unravel complexities, transforming them into radiant beacons of understanding.
 
