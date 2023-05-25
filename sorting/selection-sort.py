@@ -1,5 +1,7 @@
 """
-Selection sort is a simple and efficient sorting algorithm that works by repeatedly selecting the smallest (or largest) element from the unsorted portion of the list and moving it to the sorted portion of the list. 
+In Selection Sort, the algorithm repeatedly scans the list to find the smallest (or largest) element and swaps it with the element in the current position. This process is repeated until the entire list is sorted. The key idea is to select the appropriate element and place it in its final position, gradually building up the sorted portion of the list.
+
+The name "Selection Sort" reflects the emphasis on selecting elements during the sorting process. Unlike Bubble Sort, which involves adjacent element comparisons, Selection Sort focuses on selecting the smallest or largest element and moving it to its correct place, similar to a process of selection.
 """
 
 
