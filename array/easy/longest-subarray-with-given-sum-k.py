@@ -19,8 +19,8 @@ Explanation: The longest subarray with sum 10 is {2, 3, 5}. And its length is 3.
 
 
 def longest_subarray(nums, k):
-    # Optimal approach
-    # # Two pointer
+    # Optimal approach for non negative array: Two pointer
+    # Time complexity : O(n), Space complexity: O(1)
     n = len(nums)
     left, right = 0, 0
     sum = 0
@@ -36,7 +36,7 @@ def longest_subarray(nums, k):
             left += 1
 
         right += 1
-        # sum is less than k
+
     return max_len
 
 
