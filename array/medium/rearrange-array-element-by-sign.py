@@ -1,6 +1,16 @@
 """
 There’s an array ‘A’ of size ‘N’ with an equal number of positive and negative elements. Without altering the relative order of positive and negative elements, you must return an array of alternately positive and negative values.
 """
+"""
+[1,2,-4,-5]
+Points to be noted:
+1. Equal amount of positive and negative numbers. Array elem length always even
+create a similar size temp array to store all the positive values in first half , and negative values in second half.
+traverse n / 2 -> to store positive numbers in temp array
+traverse n / 2 to store negative number in that temp array
+then run a n loop to modify the original array 
+Time complexity: O(n), O(n)
+"""
 
 
 def rearrange_array_elem_by_sign(nums):
@@ -35,15 +45,3 @@ if __name__ == '__main__':
     print(nums1)
     func(nums2)
     print(nums2)
-
-
-"""
-[1,2,-4,-5]
-Points to be noted:
-1. Equal amount of positive and negative numbers. Array elem length always even
-create a similar size temp array to store all the positive values in first half , and negative values in second half.
-traverse n / 2 -> to store positive numbers in temp array
-traverse n / 2 to store negative number in that temp array
-then run a n loop to modify the original array 
-Time complexity: O(n), O(n)
-"""
