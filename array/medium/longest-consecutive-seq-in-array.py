@@ -35,7 +35,7 @@ def longest_consecutive_seq_in_array_brute_force(nums):
 def longest_consecutive_seq_in_array(nums):
     # Even though the solution above is space optimized, we can have a time optimized
     # solution, with some space tradeoff
-    # Time complexity: O(n), Space complexity: O(1)
+    # Time complexity: O(n), Space complexity: O(n)
     ht = {}
     curr_count = count = 0
     for num in nums:
