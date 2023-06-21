@@ -43,7 +43,11 @@ def merge(nums, low, mid, high):
     while right <= high:
         temp.append(nums[right])
         right += 1
-    # TODO: Have to understand this with dry run
+    # tmp[i - low] is for the relative order in temp
+    # for example low, high -> 3,6
+    # nums[3] = temp[ 3 - 3] / temp[0]
+    # nums[4] = temp[4 - 3] / temp[1]
+    # etc...
     for i in range(low, high + 1):
         nums[i] = temp[i - low]
     return count
