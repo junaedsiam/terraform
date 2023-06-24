@@ -54,7 +54,11 @@ def last_occurance(nums, target):
 
 
 def count_occurances_in_sorted_array(nums, target):
-    return last_occurance(nums, target) - first_occurance(nums, target) + 1
+    first = first_occurance(nums, target)
+    last = last_occurance(nums, target)
+    if first == -1:
+        return 0
+    return last - first + 1
 
 
 if __name__ == '__main__':
