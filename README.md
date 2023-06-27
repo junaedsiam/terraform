@@ -6,4 +6,4 @@ May your path be illuminated by the stars of enlightenment as you traverse the r
 
 ## How to guide
 
----COMING SOON---
+---COMING SOON----
