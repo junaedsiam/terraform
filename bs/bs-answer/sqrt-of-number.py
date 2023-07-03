@@ -30,8 +30,8 @@ def sqrt_of_number(num):
             low = mid + 1
         else:
             high = mid - 1
-
-    return low if low < high else high
+    # If we are here, that means low > high, so return high
+    return high
 
 
 if __name__ == '__main__':
