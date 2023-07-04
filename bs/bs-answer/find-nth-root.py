@@ -10,7 +10,7 @@ def multiply(num, times):
 
 
 def find_nth_root(n, num):
-    # Time complexity: O(log(n)), Space complexity: O(1)
+    # Time complexity: O(n * log(n)), Space complexity: O(1)
     low = 0
     high = num / 2.0
     eps = 1e-7
