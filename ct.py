@@ -27,7 +27,7 @@ def create_file_with_code(file_path):
     with open(new_file_path, 'w') as new_file:
         # Write the code snippet to the new file
         new_file.write(
-            f"\"\"\"\nProblem description: \n\"\"\"\ndef {function_name}(args):\n    # Time complexity: \n    pass\n\n\nif __name__ == '__main__':\n    {function_name}()\n")
+            f"\"\"\"\nProblem description: \n---------\n\n\"\"\"\ndef {function_name}(args):\n    # Time complexity: \n    pass\n\n\nif __name__ == '__main__':\n    {function_name}()\n")
 
     print(f"Created file: {new_file_path}")
 
