@@ -36,6 +36,7 @@ After removing outer parentheses of each part, this is "" + "" = "".
 
 
 def remove_outermost_parentheses(pstring):
+    # Time complexity: O(n), space complexity: O(n)
     res, opened = [], 0
     for char in pstring:
         if char == '(' and opened > 0:
