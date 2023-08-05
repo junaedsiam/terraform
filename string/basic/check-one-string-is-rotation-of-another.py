@@ -28,4 +28,5 @@ def check_one_string_is_rotation_of_another(s, goal):
 
 if __name__ == '__main__':
     ex_1, ex_2 = ("abcde", "cdeab"), ("abcde", "adced")
-    check_one_string_is_rotation_of_another()
+    print(check_one_string_is_rotation_of_another(ex_1[0], ex_1[1]))
+    print(check_one_string_is_rotation_of_another(ex_2[0], ex_2[1]))
