@@ -47,16 +47,10 @@ def create_ll_from_list(nums):
 
 def find_middle_node(head):
     # Time complexity:
-    if not head.next:
-        return head
-
-    slow = head
-    fast = head.next
-
-    while slow and fast:
-        print('slow', slow.val, 'fast', fast.val)
+    slow = fast = head
+    while fast and fast.next:
         slow = slow.next
-        fast = fast.next.next if fast.next else None
+        fast = fast.next.next
     return slow
 
 
