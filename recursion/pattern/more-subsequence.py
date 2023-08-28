@@ -20,7 +20,8 @@ Output: "abc"
 
 
 def more_subsequence(a, b):
-    # Time complexity:
+    # Time complexity: O(n + m)
+    # Space complexity: O(max(n,m))
     # Since the problem does not require the actual subsequences but rather asks
     # for the string with more subsequences (count), we can determine this by considering
     # the number of distinct characters. The string with a higher count of distinct characters
