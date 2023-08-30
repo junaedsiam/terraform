@@ -82,7 +82,7 @@ def subset_bit(nums):
     res = []
     for num in range(1 << n):  # for 3 it will be 8. loop continues from 0,1,2,3,4,5,6,7
         subset = []
-
+        #
         for i in range(n):
             if num & (1 << i):
                 subset.append(nums[i])
