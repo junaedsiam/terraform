@@ -42,7 +42,6 @@ Constraints:
 """
 
 
-# User function Template for python3
 def solve(row, col, path, ans, matrix, n):
     if row < 0 or col < 0 or row == n or col == n:
         return
