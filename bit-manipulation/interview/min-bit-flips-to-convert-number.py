@@ -38,6 +38,7 @@ def set_bit_counts(num):
 
 
 def min_bit_flips_to_convert_number(start, goal):
+    # Time complexity: O(logn) for the set_bit_counts function
     return set_bit_counts(start ^ goal)
 
 
