@@ -1,7 +1,7 @@
 """
 Problem description: 
 ---------
-
+Implement stack using array
 """
 
 
