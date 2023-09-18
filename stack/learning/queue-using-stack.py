@@ -2,7 +2,7 @@ from queue import LifoQueue
 """
 Problem description: 
 ---------
-
+Implement queue using stack
 """
 
 
