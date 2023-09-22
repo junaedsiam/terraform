@@ -60,3 +60,4 @@ def infix_to_postfix(expression: str):
 if __name__ == '__main__':
     print(infix_to_postfix("a+b*(c^d-e)^(f+g*h)-i"))
     print(infix_to_postfix("(p+q)*(m-n)"))
+    print(infix_to_postfix("((a-(b/c))*((d/k)-l))"))
