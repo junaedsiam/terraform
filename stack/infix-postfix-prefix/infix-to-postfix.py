@@ -46,7 +46,7 @@ def infix_to_postfix(expression: str):
         # Character is operator
         else:
             # If any higher priority operator is in the stack, pop and add them with the result
-            while stack and get_priority(char) <= get_priority(stack[-1]):
+            while stack and get_priority(char) < get_priority(stack[-1]):
                 result += stack.pop()
             # Finally add the current operator to the stack
             stack.append(char)
