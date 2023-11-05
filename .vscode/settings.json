@@ -2,6 +2,9 @@
   "github.copilot.enable": {
     "*": false
   },
+  "codeium.enableConfig": {
+    "*": false
+  },
   "[python]": {
     "editor.defaultFormatter": "ms-python.autopep8"
   },
