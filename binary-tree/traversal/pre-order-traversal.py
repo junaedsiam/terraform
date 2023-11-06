@@ -1,7 +1,10 @@
 """
 Problem description: 
 ---------
-
+Pre order traversal of a binary tree. Pre order means root, left, right
+Similarly in-order means left root right
+and post-order means left right root
+Other two traversals are similar. Demonstrating one here
 """
 
 
