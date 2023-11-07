@@ -47,11 +47,11 @@ def create_tree(arr):
     return solve(arr, 0, len(arr))
 
 
-def height(self, root, depth=0):
+def height(root, depth=0):
     if not root:
         return depth
-    ldepth = self.height(root.left, depth + 1)
-    rdepth = self.height(root.right, depth + 1)
+    ldepth = height(root.left, depth + 1)
+    rdepth = height(root.right, depth + 1)
     return max(ldepth, rdepth)
 
 
