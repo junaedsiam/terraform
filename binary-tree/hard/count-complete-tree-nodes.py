@@ -68,3 +68,19 @@ if __name__ == '__main__':
     root.right = TreeNode(3)
 
     print(count_complete_tree_nodes(root))
+
+
+def solve(self, preorder, pre_start, pre_end, inorder, in_start, in_end, mp):
+    if pre_start > pre_end or in_start > in_end:
+        return None
+
+    node = TreeNode(preorder[pre_start])
+    pivot_index = mp[preorder[pre_start]]
+    elem_count = pivot_index - in_start
+
+    node.left = self.solve(preorder, pre_start + 1, pre_start +
+                           elem_count, inorder, in_start, pivot_index - 1)
+    node.right = self.solve(
+        preorder, pre_start + elem_count + 1, pre_end, inorder, pivot_index + 1, in_end)
+
+    return node
