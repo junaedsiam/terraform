@@ -30,6 +30,8 @@ root is a binary search tree.
 1 <= val <= 107
 """
 
+# Helpers
+
 
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
@@ -51,6 +53,7 @@ def create_bst(ls):
     return root
 
 
+# Implementation
 def search_in_a_bst(root, val):
     while root:
         if root.val == val:
