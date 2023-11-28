@@ -25,6 +25,8 @@ def create_bst(ls):
 
     return root
 
+# Implementation
+
 
 def findCeil(root, x):
     ceil = -1
