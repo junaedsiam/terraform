@@ -7,6 +7,10 @@ def create_file_with_code(file_path):
     directory = os.path.dirname(file_path)
     file_name = os.path.basename(file_path)
 
+    # Create directories if they don't exist
+    if directory and not os.path.exists(directory):
+        os.makedirs(directory)
+
     # Remove the file extension from the file name
     file_name = os.path.splitext(file_name)[0]
 
