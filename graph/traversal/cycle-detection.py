@@ -43,6 +43,8 @@ Constraints:
 """
 from queue import Queue
 
+# BFS: Breadth first approach
+
 
 def bfs(src, visited, adj):
     q = Queue()
@@ -61,12 +63,25 @@ def bfs(src, visited, adj):
     return False
 
 
+# DFS: Depth First Approach
+def dfs(node, parent, visited, adj):
+    visited[node] = 1
+    for adj_node in adj[node]:
+        if not visited[adj_node]:
+            if dfs(adj_node, node, visited, adj):
+                return True
+        elif adj_node != parent:
+            return True
+    return False
+
+
 def cycle_detection(vertices, adj):
     visited = [0] * vertices
 
     for i in range(vertices):
         if not visited[i]:
-            if bfs(i, visited, adj):
+            # if bfs(i, visited, adj):
+            if dfs(i, -1, visited, adj):
                 return True
     return False
 
