@@ -39,6 +39,7 @@ Constraints:
 2 ≤ V ≤ 104
 1 ≤ E ≤ (N*(N-1))/2
 """
+from queue import Queue
 
 
 def dfs(node, adj, visited, stack):
@@ -50,7 +51,7 @@ def dfs(node, adj, visited, stack):
 # Function to return list containing vertices in Topological order.
 
 
-def topological_sort(v, adj):
+def topological_sort_dfs(v, adj):
     # Code here
 
     visited = [0] * v
@@ -63,5 +64,39 @@ def topological_sort(v, adj):
     return stack[::-1]
 
 
+def topological_sort_bfs(v, adj):
+    # Kahn's algorithm
+    # indegrees of a vertex means how many edges are directed towards the vertex
+    indegrees = [0] * v
+
+    # Find indegrees
+    for i in range(v):
+        for node in adj[i]:
+            indegrees[node] += 1
+
+    q = Queue()
+
+    # put item with 0 indegrees in the queue
+    for i in range(v):
+        if indegrees[i] == 0:
+            q.put(i)
+
+    res = []
+    while q.qsize():
+        node = q.get()
+        # insert indegree 0 node in the result
+        res.append(node)
+
+        for adj_node in adj[node]:
+
+            indegrees[adj_node] -= 1
+
+            if indegrees[adj_node] == 0:
+                q.put(adj_node)
+
+    return res
+
+
 if __name__ == '__main__':
-    print(topological_sort(4, [[], [0], [0], [0]]))
+    func = topological_sort_dfs
+    print(func(4, [[], [0], [0], [0]]))
