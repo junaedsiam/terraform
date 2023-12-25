@@ -1,7 +1,7 @@
 """
 Problem description: 
 ---------
-
+Shortest path in undirected graph having unit distance
 """
 from queue import Queue
 
