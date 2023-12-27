@@ -47,6 +47,7 @@ from typing import List
 
 
 def number_of_ways_to_arrive_at_destination(n: int, roads: List[List[int]]) -> int:
+    # Time complexity: Dijkstra's Algorithm -> O(ElogV) where E = Edges, V = Vertex
     # adj list
     adj = [[] for _ in range(n)]
     for u, v, time in roads:
