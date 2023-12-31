@@ -43,10 +43,10 @@ class DisjointSet:
 
         if u_parent < v_parent:
             self.parent[u_parent] = v_parent
-            self.size[v_parent] += 1
+            self.size[v_parent] += self.size[u_parent]
         else:
             self.parent[v_parent] = u_parent
-            self.size[u_parent] += 1
+            self.size[u_parent] += self.size[v_parent]
 
 
 if __name__ == '__main__':
