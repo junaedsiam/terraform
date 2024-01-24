@@ -33,6 +33,8 @@ from typing import List
 
 
 def count_subset_sum_k(arr: List[int], k: int) -> int:
+    # This problem is same as subset-sum-equal-to-k problem from this chapter
+    # with a slide edge case improvement.
     n = len(arr)
     dp = [[0] * (k + 1) for _ in range(n)]
 
