@@ -116,5 +116,44 @@ def lcs_tabulation(text1, text2):
 # in that case Space complexity would go down to O(n)
 
 
+def lcs_print_string_tabulation(text1, text2):
+    # Time complexity: O( m * n) + O(m + n)
+    # Space complexity: O(m * n)
+    m = len(text1)
+    n = len(text2)
+    dp = [[0] * (n + 1) for _ in range(m + 1)]
+    for i in range(1, m + 1):
+        for j in range(1, n + 1):
+            if text1[i - 1] == text2[j - 1]:
+                dp[i][j] = 1 + dp[i - 1][j - 1]
+            else:
+                text1_shift = dp[i - 1][j]
+                text2_shift = dp[i][j - 1]
+                dp[i][j] = max(text1_shift, text2_shift)
+
+    # For printing the LCS we will use the DP matrix
+    # And use reverse engineering to get the string
+    # We will start from the bottom
+    # check for matches between text1 and text2
+    # If match found, add that to result
+    # If not, move max(up, left)
+    res = ""
+    i, j = m, n
+    # As there is a shift in index we will start from m, n
+    # and go down until 1.
+    while i > 0 and j > 0:
+        if text1[i - 1] == text2[j - 1]:
+            res = text1[i - 1] + res
+            i -= 1
+            j -= 1
+        else:
+            if dp[i - 1][j] > dp[i][j - 1]:
+                i -= 1
+            else:
+                j -= 1
+
+    return res
+
+
 if __name__ == '__main__':
     print(lcs_tabulation("abcde", "ace"))
