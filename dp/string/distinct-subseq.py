@@ -95,4 +95,4 @@ def distinct_subseq_tabulation(s, t):
 
 
 if __name__ == '__main__':
-    print(distinct_subseq())
+    print(distinct_subseq_tabulation("babgbag", "bag"))
