@@ -91,7 +91,7 @@ def max_profit_memo(prices: List[int]) -> int:
             not_take = solve(i + 1, 0, cap, prices, dp)
         # buy= 1 meaning you must sell, you cannot buy
         else:
-            take = prices[i]+solve(i + 1, 0, cap - 1, prices, dp)
+            take = prices[i] + solve(i + 1, 0, cap - 1, prices, dp)
             not_take = solve(i + 1, 1, cap, prices, dp)
         dp[i][buy][cap] = max(take, not_take)
 
@@ -125,5 +125,27 @@ def max_profit_tabulation(prices: List[int]) -> int:
     return dp[0][0][2]
 
 
+def max_profit_tabulation_with_k(k: int, prices: List[int]) -> int:
+    # Time Complexity: O(n * 2 * 3) -> O(6n)
+    # Space Complexity: O(6n)
+    n = len(prices)
+    dp = [[[0] * (k + 1) for _ in range(2)] for _ in range(n + 1)]
+
+    for i in range(n - 1, -1, -1):
+        for j in range(2):
+            for cap in range(1, k + 1):
+                take, not_take = None, None
+                if j == 0:
+                    take = -prices[i] + dp[i + 1][1][cap]
+                    not_take = dp[i + 1][0][cap]
+                else:
+                    take = prices[i] + dp[i + 1][0][cap - 1]
+                    not_take = dp[i + 1][1][cap]
+
+                dp[i][j][cap] = max(take, not_take)
+
+    return dp[0][0][k]
+
+
 if __name__ == '__main__':
-    print(max_profit_tabulation([3, 3, 5, 0, 0, 3, 1, 4]))
+    print(max_profit_tabulation_with_k(2, [3, 2, 6, 5, 0, 3]))
