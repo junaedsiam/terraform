@@ -126,4 +126,4 @@ def max_profit_tabulation(prices: List[int]) -> int:
 
 
 if __name__ == '__main__':
-    print(buy_and_sell_stocks_iii())
+    print(max_profit_tabulation([3, 3, 5, 0, 0, 3, 1, 4]))
