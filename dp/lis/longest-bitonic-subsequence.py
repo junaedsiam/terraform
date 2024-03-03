@@ -97,7 +97,6 @@ def longest_bitonic_subsequence(arr: List[int], n: int) -> int:
         for prev_i in range(n - 1, i, -1):
             if arr[i] > arr[prev_i] and 1 + dp2[prev_i] > dp2[i]:
                 dp2[i] = 1 + dp2[prev_i]
-
     # find the max
     max_i = 0
 

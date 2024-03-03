@@ -1,6 +1,6 @@
 # Terraform
 
-Problem solving repo based on python
+Problem solving repo based on python. Huge shoutout to striver
 
 ## Todo
 
